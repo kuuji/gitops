@@ -1,3 +1,5 @@
 ---
 bases:
 - ../../../bases/dev/kuuji
+resources:
+- gh-image-sealed.yaml

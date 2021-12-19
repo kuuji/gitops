@@ -3,5 +3,3 @@ bases:
 - ../../../bases/dev/system
 patchesStrategicMerge:
 - tenants/kuuji.yaml
-resources:
-- gh-image-sealed.yaml
