@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: gcp-byeon-ca
+spec:
+  acme:
+    ...
+    solvers:
+    - dns01:
+        cloudDNS:
+          # The ID of the GCP project
+          project: byeon-ca
+          # This is the secret used to access the service account
+          serviceAccountSecretRef:
+            name: clouddns-dns01-solver-svc-acct
+            key: key.json
