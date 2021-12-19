@@ -26,6 +26,7 @@ spec:
         service:
           ports:
           - port: 8080
+            name: http
         pullSecrets:
         - gh-registry-secret
 
