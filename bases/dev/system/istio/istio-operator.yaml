@@ -8,6 +8,9 @@ spec:
   values:
     global:
       istioNamespace: istio-namespace1
+  meshConfig:
+    accessLogFile: /dev/stdout
+    enableTracing: true
   components:
     pilot:
       k8s:
