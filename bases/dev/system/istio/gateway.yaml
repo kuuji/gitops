@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "*"
+    - "*.byeon.ca"
   - port:
       number: 443
       name: https
