@@ -21,4 +21,4 @@ spec:
     - "*.byeon.ca"
     tls:
       mode: SIMPLE
-      credentialName: byeon-ca
+      credentialName: byeon-ca-tls
