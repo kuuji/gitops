@@ -16,5 +16,9 @@ spec:
   - port:
       number: 443
       name: https
-      protocol: HTTP
-    
+      protocol: HTTPS
+    hosts:
+    - "*.byeon.ca"
+    tls:
+      mode: SIMPLE
+      credentialName: byeon-ca
