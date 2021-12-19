@@ -26,3 +26,32 @@ spec:
   trafficPolicy:
     loadBalancer:
       simple: LEAST_CONN
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: gofun
+  namespace: istio-namespace1
+spec:
+  hosts:
+  - gofun.byeon.ca
+  gateways:
+  - istio-namespace1/pub-lb
+  http:
+  - name: "argocd"
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: gofun.kuuji.svc.cluster.local
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: gofun
+  namespace: istio-namespace1
+spec:
+  host: gofun.kuuji.svc.cluster.local
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_CONN
