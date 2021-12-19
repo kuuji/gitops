@@ -6,7 +6,7 @@ metadata:
 spec:
   acme:
     email: alexandre@byeon.ca
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: gcp-byeon-ca-issuer-account-key
     solvers:
