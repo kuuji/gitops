@@ -8,7 +8,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: gofun=ghcr.io/kuuji/project/app
     argocd-image-updater.argoproj.io/gofun.allow-tags: regexp:^pre-production-.*$
     argocd-image-updater.argoproj.io/gofun.helm.image-spec: containres[0].image
-    argocd-image-updater.argoproj.io/gofun.pull-secret: argocd/gh-registry-secret
+    argocd-image-updater.argoproj.io/gofun.pull-secret: kuuji/gh-registry-secret
 spec:
   # The project the application belongs to.
   project: default
