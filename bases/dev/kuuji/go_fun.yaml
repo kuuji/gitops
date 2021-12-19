@@ -45,7 +45,7 @@ spec:
         - gh-registry-secret
         replicas: 3
         rollingUpdate:
-          enabled: false
+          enabled: true
           maxSurge: "50%"
           maxUnavailable: "30%"
   # Destination cluster and namespace to deploy the application
