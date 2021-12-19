@@ -5,3 +5,4 @@ resources:
   - istio/gateway.yaml
   - istio/istio-operator.yaml
   - tenants/kuuji.yaml
+  - bitnami-sealed-secrets
