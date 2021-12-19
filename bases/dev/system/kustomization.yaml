@@ -1,6 +1,7 @@
 
 ---
 resources:
+  - application.yaml
   - istio/istio-ns-1.yaml
   - istio/gateway.yaml
   - istio/istio-operator.yaml
@@ -9,3 +10,4 @@ resources:
   - argocd/argocd-vs.yaml
   - argocd/argocd-cm.yaml
   - argocd/argocd-cmd-params-cm.yaml
+  - cert-manager/controller/cert-manager.yaml
