@@ -19,6 +19,3 @@ spec:
       - name: pub-lb
         namespace: istio-namespace1
         enabled: true
-        k8s:
-          service:
-            type: NodePort
