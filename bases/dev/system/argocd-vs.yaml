@@ -20,6 +20,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: argocd-ui
+  namespace: istio-namespace1
 spec:
   host: argocd-server.argocd.svc.cluster.local
   trafficPolicy:
