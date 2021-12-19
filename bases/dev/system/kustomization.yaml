@@ -6,4 +6,6 @@ resources:
   - istio/istio-operator.yaml
   - tenants/kuuji.yaml
   - bitnami-sealed-secrets
-  - argocd-vs.yaml
+  - argocd/argocd-vs.yaml
+  - argocd/argocd-cm.yaml
+  - argocd/argocd-cmd-params-cm.yaml
