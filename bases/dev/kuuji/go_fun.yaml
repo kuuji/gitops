@@ -43,6 +43,11 @@ spec:
             name: http
         pullSecrets:
         - gh-registry-secret
+        replicas: 3
+        rollingUpdate:
+          enabled: false
+          maxSurge: "50%"
+          maxUnavailable: "30%"
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
