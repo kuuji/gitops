@@ -1,0 +1,21 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  creationTimestamp: null
+  name: gh-registry-secret
+  namespace: argocd
+spec:
+  encryptedData:
+    .dockerconfigjson: AgCClsOEsh74OoLWUxnfmje9EY22vqNVBwkgxD5flq6HdhuqkLvYyIfLzVH6TxYO0ZZM+62x0aUZu0x4dJO1NohrzWrl22VF6yR5sNZRXm0FBFNe7ntY01gKRC+NHdUjmK4bk5DSVnVSigQs4gLGuqiCPk8Yw55uOuK58u/M5Iyqmsx0aw/FWqI483ASic6gQ2ptKrVb5Z7ZcAohBmA32E4hyUgGiuxfhAVf1I2Zyc6Mj59GR6A79IacOnzX0Gah5nv/ShrZR/9VxxMR9BOCv8rqezv5sTSVCESmV8GRV1dbbmafjzP1XUK90RKKkvLhADAAGTClymLDlAEDO/GKq7Zkv3fISpKN5aMZooPFOW5SQP91mlGgxlSbK4phYlACG+cuuL3Dp9iWAeLPHGus/T4e5iMkyLeT7Q17yJGDiyCbXOOOo3h+/FrmxFnljrTJZnA/60JOMxpXXr4tSZAPojSSLcQ2fvQC4v6fB/0yKFUl6hqkIdVOFEwqIzIMKAn+fiQt7BbUhG3Y3FB5zk6bd0BV7okdUhWGAK9XHx26G83xjnYtQ8TIuMGfgO85JmGpibhc0NkFARLX/2MxJdD44pWTHfDCPpWcUjbraRXD5Ys9vttE9lqOthUlyOPQs5Zu3pntmI9mK9onf6hLDdeac2sP+KWlLNvu1hsEVa0Kech4Hnyf1a4a2dJjkJLmr+So8i9B1iaFQ4wIzJgQMR4Sxk9IKgPSUuOPuj953HEmWN95XKVamxVtOnYiITT5351xWl3Bi52aiqzpjGY2tQFPfrPX1iYvAbPuXqdTwUdB+TsUjsri9fiu1i+1TgXo2N9n4cSBsZkqblTadPBMFNiZghxaCXK5
+  template:
+    data: null
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+      creationTimestamp: null
+      name: gh-registry-secret
+      namespace: argocd
+    type: kubernetes.io/dockerconfigjson
+
