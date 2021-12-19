@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: gh-registry-cred
+  namespace: kuuji
+spec:
+  encryptedData:
+    config.json: AgBQw7s12FVqUcGsa1yyNvQCySMfIxHT5L4DYcFBH4dKazh4uShSYuJMVh7ATptae1iIeNebKt79y1SLl6TtRsfCMLlEH7DTJW8CVpfLQItEL+ttVAdJqpZGPW5wm/R9UDrlNh8FDmDccYQ7bLiNtSLtA+5p01I4C9XcE5CUIDBoXzaj/x5IAk+ngWcK+UEn4lJKB4J5dnL92yMOOwZMjZxOLXUIXoRoxvs0lbE77oJrKOxAzTGEFsXlbmuwsrLqVLonF5HneYT7y06UY0kD+43fl81jSPdS/QJWTqKh7AFDSM4elEZ4okh8FQlt1xl5us5mHjjTgeT3euPYKC68TRMj3KR21vksOvif3aGY0qjIM8+IvUDAIV+YRsg7ahUueA8FlIssm9I3jRPJdytcx8bExcRhrsx8k2pJvWR4ZVFr1koTjYuAxPm+xgPJ7bzOdzTbEoLEhLCWppcBeeFbag8tUr9YtAzoTNzqOHbV9QJtkpSqorKGfwweEg+iuV/bbhOwxzdzDdZBnrDs36EMDJKMO6IiaW1OsAE09AP+Y+OZG37afKDptcDk0QNX4PFmssHWM3yZZ8JOy0Jys1yQWXGHG2xHrbMNBJPSswpo3hD7YY0KBsVsSgjs15o5jBbGJTlv1Zrj+oRDhpWLdFY0vA2MvffsR8IXyTGlpF0BdhJCNx4ilBiE4ETBNZmFVjtVI5lCcoanTjdGGekA8k0YkvxUbYYR6NC/VOyM0eHxxSkVNllHLr/dzcARJ0rw4pYEtMZSgnSHeL1H8cIwBZ1uoxrAQKJhp3ck+nAPPczXmPK/0826YSCHR5/GiNw+CHigmyFdUppAj7/QCkUGF5JQUp9NlsWE
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: gh-registry-cred
+      namespace: kuuji
+    type: kubernetes.io/dockerconfigjson
+
