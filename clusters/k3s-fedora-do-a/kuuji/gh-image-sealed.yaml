@@ -1,17 +1,21 @@
 apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
 metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
   creationTimestamp: null
-  name: gh-registry-cred
+  name: gh-registry-secret
   namespace: kuuji
 spec:
   encryptedData:
-    config.json: AgBQw7s12FVqUcGsa1yyNvQCySMfIxHT5L4DYcFBH4dKazh4uShSYuJMVh7ATptae1iIeNebKt79y1SLl6TtRsfCMLlEH7DTJW8CVpfLQItEL+ttVAdJqpZGPW5wm/R9UDrlNh8FDmDccYQ7bLiNtSLtA+5p01I4C9XcE5CUIDBoXzaj/x5IAk+ngWcK+UEn4lJKB4J5dnL92yMOOwZMjZxOLXUIXoRoxvs0lbE77oJrKOxAzTGEFsXlbmuwsrLqVLonF5HneYT7y06UY0kD+43fl81jSPdS/QJWTqKh7AFDSM4elEZ4okh8FQlt1xl5us5mHjjTgeT3euPYKC68TRMj3KR21vksOvif3aGY0qjIM8+IvUDAIV+YRsg7ahUueA8FlIssm9I3jRPJdytcx8bExcRhrsx8k2pJvWR4ZVFr1koTjYuAxPm+xgPJ7bzOdzTbEoLEhLCWppcBeeFbag8tUr9YtAzoTNzqOHbV9QJtkpSqorKGfwweEg+iuV/bbhOwxzdzDdZBnrDs36EMDJKMO6IiaW1OsAE09AP+Y+OZG37afKDptcDk0QNX4PFmssHWM3yZZ8JOy0Jys1yQWXGHG2xHrbMNBJPSswpo3hD7YY0KBsVsSgjs15o5jBbGJTlv1Zrj+oRDhpWLdFY0vA2MvffsR8IXyTGlpF0BdhJCNx4ilBiE4ETBNZmFVjtVI5lCcoanTjdGGekA8k0YkvxUbYYR6NC/VOyM0eHxxSkVNllHLr/dzcARJ0rw4pYEtMZSgnSHeL1H8cIwBZ1uoxrAQKJhp3ck+nAPPczXmPK/0826YSCHR5/GiNw+CHigmyFdUppAj7/QCkUGF5JQUp9NlsWE
+    config.json: AgB6WlnigFvIOIXWwSIqFE0AwjnZIXL8fJhH7ZKIHkGuwMYbYF6kb3ou1NY9lX0JiZngiL9T5XVxzVQuvj3Vl21qmAjX9lW9Xl1N9TN6fpnladPYSYYIsrOfJi2rel753aQh+czX5RmPRtPdiethsvpQVdXL0UyFU1xUgV2fsCO01g5uQwH96UObf8m8dPSEovD7A0b8euR+KQchttllSy9TVjVvtxj6PYJY6HVbUQl7t2qMtFURkmp9O2WB0sQUklntBOPuq7TMcvHLAcFRA3UXo07/iD3nlum3csoYZuK96QF6PpcSG2QmrlHnOSo/9RhHPXIJfQ1JHlyPIc41Uka9WbMMQajSvG86KnI0qXLesu3ov+/Knn8z4f4CMTUi+rko1MS523JRnkRJOdRPZ8CjEmS2dLcvmmqW+D/SnFNxvD5vnHauB0WgaVnfs/AaML4lh9s/CaoaLWt6dXbU+rkA0B/7AP6j5y66+t5vuar1BO8UImf6MD2ZZz1Q8xBA/sg0DxVXX0BIJKk9P6hozBSNfd7PKFoWV2qfKSImeut0H/6GD0nDeADOC9JnEYOKZbTRZ8+uk3YEpTzQJJNgg69NR4kePAYzloT4jQ5g5DhGM0Ks4Zb2gVVz1TSopfqLqG7nKmfgGNl7TozPFPKzJzLCB+pPL157xsFM/YoR3XLZ033JvdSjRZL/OdR37Oi7SYWIH2GFZWv0pb5bk93v3THYXwJqk0cm6a5qrAxDa4s/pyEJehcUR/IP+Jo/5p9MHKlzM82MMR31Zj4N7geluVFIPxtPsoNuXWrT70/QEfVpPKudkVGaeegzISeEUDrxjUaFc2asU2FLV28l4ryTzBNnge9p
   template:
     data: null
     metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
       creationTimestamp: null
-      name: gh-registry-cred
+      name: gh-registry-secret
       namespace: kuuji
     type: kubernetes.io/dockerconfigjson
 
