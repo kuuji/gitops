@@ -2,12 +2,12 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: argocd-ui
-  namespace: istio-system
+  namespace: istio-namespace1
 spec:
   hosts:
   - argocd.byeon.ca
   gateways:
-  - istio-system/pub-lb
+  - istio-namespace1/pub-lb
   http:
   - name: "argocd"
     route:
