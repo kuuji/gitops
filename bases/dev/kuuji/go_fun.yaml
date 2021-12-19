@@ -22,7 +22,7 @@ spec:
       # Values file as block file
       values: |
         containers:
-        - image: ghcr.io/kuuji/project/app:4162b30450cd37ca1c470dded73ddceaa027f77de65bfe577757fdfacedcab56
+        - image: ghcr.io/kuuji/project/app:GaGhtgD
         service:
           ports:
           - port: 8080
