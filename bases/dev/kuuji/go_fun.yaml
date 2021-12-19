@@ -26,6 +26,8 @@ spec:
         service:
           ports:
           - port: 8080
+        pullSecrets:
+        - gh-registry-secret
 
   # Destination cluster and namespace to deploy the application
   destination:
