@@ -26,6 +26,8 @@ spec:
   trafficPolicy:
     loadBalancer:
       simple: LEAST_CONN
+    tls:
+      mode: DISABLE
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
