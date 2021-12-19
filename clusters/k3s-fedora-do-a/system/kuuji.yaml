@@ -1,7 +1,9 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kuuji
+  namespace: argocd
 spec:
   source:
     path: cluster/k3s-fedora-do-a/kuuji

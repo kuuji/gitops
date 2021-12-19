@@ -1,5 +1,4 @@
 
-  
 ---
 resources:
   - istio/istio-ns-1.yaml
