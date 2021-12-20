@@ -1,7 +1,6 @@
 
 ---
 resources:
-  - application.yaml
   - istio/istio-ns-1.yaml
   - istio/gateway.yaml
   - istio/istio-operator.yaml
