@@ -13,11 +13,8 @@ data:
   # Role definitions and bindings are in the form:
   #   g, subject, inherited-subject
   # See https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/rbac.md for additional information.
-  # policy.csv: |
-  #   # Grant all members of the group 'my-org:team-alpha; the ability to sync apps in 'my-project'
-  #   p, my-org:team-alpha, applications, sync, my-project/*, allow
-  #   # Grant all members of 'my-org:team-beta' admins
-  #   g, my-org:team-beta, role:admin
+  policy.csv: |
+    g, alexandre@byeon.ca, role:admin
 
   # # policy.default is the name of the default role which Argo CD will falls back to, when
   # # authorizing API requests (optional). If omitted or empty, users may be still be able to login,
@@ -28,4 +25,4 @@ data:
   # # If omitted, defaults to: '[groups]'. The scope value can be a string, or a list of strings.
   # scopes: '[cognito:groups, email]'
 
-  policy.default: role:readonly
+  # policy.default: role:readonly
