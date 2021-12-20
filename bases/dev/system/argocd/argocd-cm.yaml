@@ -18,6 +18,44 @@ data:
   # Specifies token expiration duration
   users.session.duration: "24h"
 
+  dex.config: |
+    connectors:
+    - type: saml
+      id: saml
+      name: saml
+      config:
+        ssoURL: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx (e.g. https://accounts.google.com/o/saml2/idp?idpid=Abcde0)
+        entityIssuer: https://argocd.byeon.ca/api/dex/callback
+        caData: |
+          LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURkRENDQWx5Z0F3SUJBZ0lHQVgzVlB0U1pN
+          QTBHQ1NxR1NJYjNEUUVCQ3dVQU1Ic3hGREFTQmdOVkJBb1RDMGR2YjJkc1pTQkoKYm1NdU1SWXdG
+          QVlEVlFRSEV3MU5iM1Z1ZEdGcGJpQldhV1YzTVE4d0RRWURWUVFERXdaSGIyOW5iR1V4R0RBV0Jn
+          TlZCQXNURDBkdgpiMmRzWlNCR2IzSWdWMjl5YXpFTE1Ba0dBMVVFQmhNQ1ZWTXhFekFSQmdOVkJB
+          Z1RDa05oYkdsbWIzSnVhV0V3SGhjTk1qRXhNakl3Ck1EQXpNREEwV2hjTk1qWXhNakU1TURBek1E
+          QTBXakI3TVJRd0VnWURWUVFLRXd0SGIyOW5iR1VnU1c1akxqRVdNQlFHQTFVRUJ4TU4KVFc5MWJu
+          UmhhVzRnVm1sbGR6RVBNQTBHQTFVRUF4TUdSMjl2WjJ4bE1SZ3dGZ1lEVlFRTEV3OUhiMjluYkdV
+          Z1JtOXlJRmR2Y21zeApDekFKQmdOVkJBWVRBbFZUTVJNd0VRWURWUVFJRXdwRFlXeHBabTl5Ym1s
+          aE1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBCk1JSUJDZ0tDQVFFQXM4K0R5SnVUbC9J
+          RVhrWDFGR0dMeHJsd1FxQjlCanQ4QzdrTFd5N1B5WEVnc3pVdm42QXprT2N6TTJ1ZHJNc00KcnpJ
+          ZFY2RlRmWFpIa0o5VnZNWXhXblIvdytMaE55L3pmdzk3c2RITUZDeTRJcy9jNHNjUGsreEN5SVZu
+          ZGRRMHViMC81K1FuUVhqcwpoSiswZmtqNmZDNmZweWEvb0FsVzJ5QzlwSFF0R0NsOWJOcUlQNUtV
+          ZEZtSi9MUnNoU1pCcndiS2dBYTV5T2pUbDJuZEx1bTJJd2dnCmRXdEdTcDdkS050UVJTR21WZzBh
+          bzZXK2FwQnBRd0RkN09xWGx4NDZBQzZ5a0ZncGFoMnFvY3lMWTNGckxGQUs2UWdDOVB3WC95S3oK
+          WU1Ba2llZm9lckVteGVkVWN3bHFMK3hQTDJrRFF1MHBmUDc3NnhwTkZ5NVMwRmtJNHdJREFRQUJN
+          QTBHQ1NxR1NJYjNEUUVCQ3dVQQpBNElCQVFBdCtLUUUxNUg2dThEcjlCNVFvbDNBZDhadERldzly
+          ZDRUTUFnQ2dtZGlSeUJseU40aUlkbEc1UzZaSzF2MnlVbUFWMkR4CnM0U3pTSFZxYlJoZGZRWXEr
+          d0JiajFzRUZSVm8yUWtYQnMrMFhESkJyclloR05NaFZhbit0N0tDLytRa20zYnJMSVo0K082Mm8v
+          aFIKaDQ1ekJoemJSNStGYkNYcUU0a3R3VGFyZi9iMldyZmh3bEJiT004aU1JNkhqQzlDTTJWK2ky
+          WGxnWk1GSCtmZnBodVBqZ1J6V2JWYgo0WUdNclZkOVdaYTE4NDRBUTMzaVlvamh0M2hNMmJJYTlG
+          d3pmS1d6SGI1d3QwNEtFWUtoQk5iOGNlVmVxc1I3R3BFUmFqUUZRNU0zCm5DN3hNek8vM0hZd1J4
+          TmdPM0YvVmlBaVkyRVFqQmVkV2I0enRIbnJEcFo1Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0=
+
+        redirectURI: https://argocd.byeon.ca/api/dex/callback
+        usernameAttr: name
+        emailAttr: email
+        # optional
+        ssoIssuer: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx (e.g. https://accounts.google.com/o/saml2?idpid=Abcde0)
+
   # Specifies regex expression for password
   # passwordPattern: "^.{8,32}$"
 
