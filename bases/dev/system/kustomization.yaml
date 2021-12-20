@@ -11,6 +11,7 @@ resources:
   - argocd/argocd-cm.yaml
   - argocd/argocd-cmd-params-cm.yaml
   - argocd/argocd-image-updater.yaml
+  - argocd/argocd-rbac-cm.yaml
   - argocd/gh-image-sealed.yaml
   - cert-manager/controller/cert-manager.yaml
   - cert-manager/manifests/clouddns-dns01-solver-svc-acct-sealed-secret.yaml
