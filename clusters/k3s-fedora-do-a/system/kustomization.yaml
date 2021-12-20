@@ -3,3 +3,5 @@ bases:
 - ../../../bases/dev/system
 patchesStrategicMerge:
 - tenants/kuuji.yaml
+resources:
+- application.yaml
