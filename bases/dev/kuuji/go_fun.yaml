@@ -35,7 +35,7 @@ spec:
               port: 8080
           readinessProbe:
             httpGet:
-              path: /error
+              path: /
               port: 8080
         service:
           ports:
