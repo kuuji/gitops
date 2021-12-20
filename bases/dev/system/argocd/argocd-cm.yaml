@@ -24,7 +24,7 @@ data:
       id: saml
       name: saml
       config:
-        ssoURL: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx (e.g. https://accounts.google.com/o/saml2/idp?idpid=Abcde0)
+        ssoURL: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx
         entityIssuer: https://argocd.byeon.ca/api/dex/callback
         caData: |
           LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURkRENDQWx5Z0F3SUJBZ0lHQVgzVlB0U1pN
@@ -54,7 +54,7 @@ data:
         usernameAttr: name
         emailAttr: email
         # optional
-        ssoIssuer: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx (e.g. https://accounts.google.com/o/saml2?idpid=Abcde0)
+        ssoIssuer: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx
 
   # Specifies regex expression for password
   # passwordPattern: "^.{8,32}$"
