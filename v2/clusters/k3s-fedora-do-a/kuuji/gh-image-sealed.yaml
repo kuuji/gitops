@@ -1,0 +1,21 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  creationTimestamp: null
+  name: gh-registry-secret
+  namespace: kuuji
+spec:
+  encryptedData:
+    .dockerconfigjson: AgA2gBpsbSUx6Xxi8Agp5BONURcs7h7oqiHkyphyIAJF5N34Q34jMix6jI8XsnIkC6BxhRYIPBtGHiqABgFympYXH0XVvX4EuX00laKkK3XVlHW6fbQrTAUDlco4KG+MtGmnpatbOzwStMaBEKlhRn8isFoB6nRBz4MAm06sdyRYXNWGf1IxW88bBeIVtMbs33UzMF9lsFqYTKb7MHNghDxB02hT8XNpkAy9I/mFa2ZfAU2kUlwmmuc1BhMUde52qwcgy1o8cYm8oYwsuqAeG401BCyKtCscOOBKIi6Fb6/4OZpjgk+V5boSD9ZJOB9ndw/LMRWG6zjDwMIYzTw7+nKK3ObVi7FDhW/ayPy9RCi/uJGFMBgxxABNlT2J7U//LuoKg+7ES0ufhIGFF1UU/D8DhU4hnoVLcyZh4q6x4Cb4NCtfPQwPIHANo7iykCE/nnkMm8KKhJqv1LjG2nmmJpa5yzOUtZqq9Gva/AVSOIxygniKs+3FTGnYbpWyJYIaB8kbzvjnbNbncAarurKjJzesDk4wnibeksYwMUNE/ATfP4sCn+2pidCsxzDEelVp0cz7e6vfoZYM8IIKEhQaAwkUKKjPoWows5iWKYpBEz+cOxXdYr+tCiuIlbbzpDn2XeS3LM+0QXEjg6mZAwiibUQlIJaeKQT5220qqb8CgfPhgeIDbN86BxlAXwu6G/JzY74Ael7bp8+rw2ZcMgjowNqsxr5C0pOr0wfB4H4vtTTmz+gt2gzhHGHOu7S+rusQ7BsW7lZ+zbTT8p5tyuaW8cEUUepu1+USMJN2rtEoiupxHS0KfGR2O6ZVjnpU12Vy07gCCqhFicmpz/0AblmWPpg+m1OG
+  template:
+    data: null
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+      creationTimestamp: null
+      name: gh-registry-secret
+      namespace: kuuji
+    type: kubernetes.io/dockerconfigjson
+
