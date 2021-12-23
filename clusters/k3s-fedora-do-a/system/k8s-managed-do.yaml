@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server: do-nyc1-k8s-1-21-5-do-0-nyc1-1640271152489
+    server: https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com
   project: default
   source:
     path: clusters/k8s-managed-do/system
