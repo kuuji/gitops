@@ -10,7 +10,7 @@ spec:
       istioNamespace: istio-namespace1
   meshConfig:
     accessLogFile: /dev/stdout
-    enableTracing: true
+    enableTracing: false
   components:
     pilot:
       k8s:
