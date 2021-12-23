@@ -1,9 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: system-k8s-managed-do
+  name: system
   namespace: argocd
 spec:
+  destination:
+    server: do-nyc1-k8s-1-21-5-do-0-nyc1-1640271152489
   project: default
   source:
     path: clusters/k8s-managed-do/system

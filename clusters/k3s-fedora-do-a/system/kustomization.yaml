@@ -5,6 +5,7 @@ patchesStrategicMerge:
 - tenants/kuuji.yaml
 resources:
 - application.yaml
+- k8s-managed-do.yaml
 - argocd/argocd-vs.yaml
 - argocd/argocd-cm.yaml
 - argocd/argocd-cmd-params-cm.yaml
