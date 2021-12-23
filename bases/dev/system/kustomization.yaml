@@ -5,13 +5,7 @@ resources:
   - istio/gateway.yaml
   - istio/istio-operator.yaml
   - tenants/kuuji.yaml
-  - bitnami-sealed-secrets
-  - argocd/argocd-vs.yaml
-  - argocd/argocd-cm.yaml
-  - argocd/argocd-cmd-params-cm.yaml
-  - argocd/argocd-image-updater.yaml
-  - argocd/argocd-rbac-cm.yaml
-  - argocd/gh-image-sealed.yaml
+  - bitnami-sealed-secrets/bitnami-sealed-secrets.yaml
   - cert-manager/controller/cert-manager.yaml
   - cert-manager/manifests/clouddns-dns01-solver-svc-acct-sealed-secret.yaml
   - cert-manager/manifests/issuer.yaml

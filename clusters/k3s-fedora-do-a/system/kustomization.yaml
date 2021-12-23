@@ -1,7 +1,13 @@
 ---
 bases:
-- ../../../bases/dev/system
+- ../../../bases/dev/system/
 patchesStrategicMerge:
 - tenants/kuuji.yaml
 resources:
 - application.yaml
+- argocd/argocd-vs.yaml
+- argocd/argocd-cm.yaml
+- argocd/argocd-cmd-params-cm.yaml
+- argocd/argocd-image-updater.yaml
+- argocd/argocd-rbac-cm.yaml
+- argocd/gh-image-sealed.yaml
