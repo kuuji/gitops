@@ -15,7 +15,7 @@ spec:
     metadata:
       name: '{{cluster}}-cert-manager-controller'
     spec:
-    project: "default"
+      project: "default"
       source:
         repoURL: https://charts.jetstack.io
         targetRevision: v1.6.1
