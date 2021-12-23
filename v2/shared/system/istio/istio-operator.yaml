@@ -23,7 +23,7 @@ spec:
         helm:
           values: |
             watchedNamespaces: istio-namespace1,istio-namespace2
-            hub: docker.io/istio/operator
+            hub: docker.io/istio
             tag: 1.12.1
       destination:
         server: '{{url}}'
