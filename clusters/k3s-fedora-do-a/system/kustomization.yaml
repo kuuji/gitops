@@ -10,5 +10,6 @@ resources:
 - argocd/argocd-cmd-params-cm.yaml
 - argocd/argocd-image-updater.yaml
 - argocd/argocd-applicationset-controller.yaml
+- argocd/argocd-applicationset-controller-crds.yaml
 - argocd/argocd-rbac-cm.yaml
 - argocd/gh-image-sealed.yaml
