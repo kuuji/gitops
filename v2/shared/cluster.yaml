@@ -20,5 +20,7 @@ spec:
         repoURL: git@github.com:kuuji/gitops.git
         targetRevision: HEAD
         path: v2/clusters/{{cluster}}/system
+        directory:
+          recurse: true
       destination:
         server: '{{url}}'
