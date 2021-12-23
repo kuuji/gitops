@@ -19,6 +19,6 @@ spec:
       source:
         repoURL: git@github.com:kuuji/gitops.git
         targetRevision: HEAD
-        path: clusters/{{cluster}}/system
+        path: v2/clusters/{{cluster}}/system
       destination:
         server: '{{url}}'
