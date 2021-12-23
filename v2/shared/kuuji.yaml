@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: kuuji
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: git@github.com:kuuji/gitops.git
+      revision: HEAD
+      files:
+      - path: "v2/clusters/**/config.json"
+  template:
+    metadata:
+      name: '{{cluster.name}}-kuuji'
+    spec:
+      project: "default"
+      source:
+        repoURL: git@github.com:kuuji/gitops.git
+        targetRevision: HEAD
+        path: v2/clusters/{{cluster.name}}/kuuji
+        directory:
+          recurse: true
+      destination:
+        server: '{{cluster.server}}'
