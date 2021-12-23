@@ -21,6 +21,7 @@ spec:
         argocd-image-updater.argoproj.io/gofun.helm.image-spec: gofun.containers[0].image
         argocd-image-updater.argoproj.io/gofun.pull-secret: pullsecret:argocd/gh-registry-secret
         argocd-image-updater.argoproj.io/gofun.update-strategy: latest
+        argocd-image-updater.argoproj.io/write-back-method: git
     spec:
       # The project the application belongs to.
       project: default
