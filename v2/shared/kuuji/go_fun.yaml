@@ -22,6 +22,7 @@ spec:
         argocd-image-updater.argoproj.io/gofun.pull-secret: pullsecret:argocd/gh-registry-secret
         argocd-image-updater.argoproj.io/gofun.update-strategy: latest
         argocd-image-updater.argoproj.io/write-back-method: git
+        argocd-image-updater.argoproj.io/git-branch: main
     spec:
       # The project the application belongs to.
       project: default
