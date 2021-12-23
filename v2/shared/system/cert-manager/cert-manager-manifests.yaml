@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cert-manager
+  name: cert-manager-manifests
   namespace: argocd
 spec:
   generators:
@@ -13,7 +13,7 @@ spec:
         url: https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com
   template:
     metadata:
-      name: '{{cluster}}-cert-manager'
+      name: '{{cluster}}-cert-manager-manifests'
     spec:
       project: "default"
       source:
