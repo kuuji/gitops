@@ -1,7 +1,6 @@
 gofun:
   containers:
-  - image: ghcr.io/kuuji/project/app:GaGhtgD
-    livenessProbe:
+  - livenessProbe:
       httpGet:
         path: /
         port: 8080
