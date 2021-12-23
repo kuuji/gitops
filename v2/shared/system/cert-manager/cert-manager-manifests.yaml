@@ -19,7 +19,7 @@ spec:
       source:
         repoURL: git@github.com:kuuji/gitops.git
         targetRevision: HEAD
-        path: v2/bases/system/cert-manager
+        path: v2/bases/system/cert-manager/manifests
         directory:
           recurse: true
       destination:

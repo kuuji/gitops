@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: k3s-fedora-do-a
+        url: https://kubernetes.default.svc
+      - cluster: k8s-managed-do
+        url: https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com
+  template:
+    metadata:
+      name: '{{cluster}}-cert-manager'
+    spec:
+      project: "default"
+      repoURL: https://charts.jetstack.io
+      targetRevision: v1.6.1
+      chart: cert-manager
+      # helm specific config
+      helm:
+        # Release name override (defaults to application name)
+        releaseName: cert-manager
+        # Values file as block file
+        values: |
+          installCRDs: true
+      destination:
+        server: '{{url}}'
+        namespace: cert-manager
+      # Sync policy
+      syncPolicy:
+        syncOptions:     # Sync options which modifies sync behavior
+        - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+
