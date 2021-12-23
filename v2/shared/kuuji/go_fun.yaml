@@ -14,11 +14,11 @@ spec:
           revision: HEAD
           files:
           - path: "v2/clusters/**/.config.json"
-      - git:
-          repoURL: git@github.com:kuuji/gitops.git
-          revision: HEAD
-          files:
-          - path: "v2/clusters/**/kuuji/.go_fun.json"
+      # - git:
+      #     repoURL: git@github.com:kuuji/gitops.git
+      #     revision: HEAD
+      #     files:
+      #     - path: "v2/clusters/**/kuuji/.go_fun.json"
   template:
     metadata:
       name: '{{cluster.name}}-go-fun'
@@ -61,7 +61,7 @@ spec:
                 name: http
             pullSecrets:
             - gh-registry-secret
-            replicas: {{replica}}
+            replicas: '{{replica}}'
             rollingUpdate:
               enabled: true
               maxSurge: "50%"
