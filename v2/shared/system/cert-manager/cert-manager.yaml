@@ -20,7 +20,7 @@ spec:
         repoURL: git@github.com:kuuji/gitops.git
         targetRevision: HEAD
         path: v2/bases/system/cert-manager
-      directory:
-        recurse: true
+        directory:
+          recurse: true
       destination:
         server: '{{url}}'
