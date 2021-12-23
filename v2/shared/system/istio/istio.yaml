@@ -19,6 +19,6 @@ spec:
       source:
         repoURL: git@github.com:kuuji/gitops.git
         targetRevision: HEAD
-        path: v2/bases/istio
+        path: v2/bases/system/istio
       destination:
         server: '{{url}}'
