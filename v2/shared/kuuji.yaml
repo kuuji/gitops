@@ -9,7 +9,7 @@ spec:
       repoURL: git@github.com:kuuji/gitops.git
       revision: HEAD
       files:
-      - path: "v2/clusters/**/config.json"
+      - path: "v2/clusters/**/.config.json"
   template:
     metadata:
       name: '{{cluster.name}}-kuuji'

@@ -13,12 +13,12 @@ spec:
           repoURL: git@github.com:kuuji/gitops.git
           revision: HEAD
           files:
-          - path: "v2/clusters/**/config.json"
+          - path: "v2/clusters/**/.config.json"
       - git:
           repoURL: git@github.com:kuuji/gitops.git
           revision: HEAD
           files:
-          - path: "v2/clusters/**/kuuji/go_fun.json"
+          - path: "v2/clusters/**/kuuji/.go_fun.json"
   template:
     metadata:
       name: '{{cluster.name}}-go-fun'
