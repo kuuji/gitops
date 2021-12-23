@@ -24,5 +24,6 @@ appVersion: "1.0"
 
 dependencies:
 - name: component-chart
+  alias: gofun
   version: 0.8.4
   repository: https://charts.devspace.sh

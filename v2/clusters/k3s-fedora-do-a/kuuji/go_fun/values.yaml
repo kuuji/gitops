@@ -1,21 +1,22 @@
-containers:
-- image: ghcr.io/kuuji/project/app:GaGhtgD
-  livenessProbe:
-    httpGet:
-      path: /
-      port: 8080
-  readinessProbe:
-    httpGet:
-      path: /
-      port: 8080
-service:
-  ports:
-  - port: 8080
-    name: http
-pullSecrets:
-- gh-registry-secret
-replicas: 3
-rollingUpdate:
-  enabled: true
-  maxSurge: "50%"
-  maxUnavailable: "30%"
+gofun:
+  containers:
+  - image: ghcr.io/kuuji/project/app:GaGhtgD
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 8080
+  service:
+    ports:
+    - port: 8080
+      name: http
+  pullSecrets:
+  - gh-registry-secret
+  replicas: 3
+  rollingUpdate:
+    enabled: true
+    maxSurge: "50%"
+    maxUnavailable: "30%"
