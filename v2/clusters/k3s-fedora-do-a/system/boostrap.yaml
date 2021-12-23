@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: v2/shared/system
+    path: v2/shared
     repoURL: git@github.com:kuuji/gitops.git
     targetRevision: HEAD
     directory:
