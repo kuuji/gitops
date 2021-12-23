@@ -5,15 +5,14 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: k3s-fedora-do-a
-        url: https://kubernetes.default.svc
-      - cluster: k8s-managed-do
-        url: https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com
+  - git:
+      repoURL: git@github.com:kuuji/gitops.git
+      revision: HEAD
+      files:
+      - path: "v2/clusters/**/config.json"
   template:
     metadata:
-      name: '{{cluster}}-istio-operator'
+      name: '{{cluster.name}}-istio-operator'
     spec:
       project: "default"
       source:
@@ -26,7 +25,7 @@ spec:
             hub: docker.io/istio
             tag: 1.12.1
       destination:
-        server: '{{url}}'
+        server: '{{cluster.server}}'
         namespace: istio-operator
       syncPolicy:
         syncOptions:     # Sync options which modifies sync behavior

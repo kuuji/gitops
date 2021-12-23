@@ -5,15 +5,14 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: k3s-fedora-do-a
-        url: https://kubernetes.default.svc
-      - cluster: k8s-managed-do
-        url: https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com
+  - git:
+      repoURL: git@github.com:kuuji/gitops.git
+      revision: HEAD
+      files:
+      - path: "v2/clusters/**/config.json"
   template:
     metadata:
-      name: '{{cluster}}-cert-manager-manifests'
+      name: '{{cluster.name}}-cert-manager-manifests'
     spec:
       project: "default"
       source:
@@ -23,4 +22,4 @@ spec:
         directory:
           recurse: true
       destination:
-        server: '{{url}}'
+        server: '{{cluster.server}}'
