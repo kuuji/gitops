@@ -1,0 +1,11 @@
+
+---
+resources:
+  - istio/istio-ns-1.yaml
+  - istio/gateway.yaml
+  - istio/istio-operator.yaml
+  - tenants/kuuji.yaml
+  - cert-manager/controller/cert-manager.yaml
+  - cert-manager/manifests/clouddns-dns01-solver-svc-acct-sealed-secret.yaml
+  - cert-manager/manifests/issuer.yaml
+  - cert-manager/manifests/certificate.yaml

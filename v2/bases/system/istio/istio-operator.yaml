@@ -1,0 +1,24 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-namespace1
+  name: istio-operator1
+spec:
+  profile: minimal
+  values:
+    global:
+      istioNamespace: istio-namespace1
+  meshConfig:
+    accessLogFile: /dev/stdout
+    enableTracing: true
+  components:
+    pilot:
+      k8s:
+        resources:
+          requests:
+            memory: 256m
+            cpu: 256m
+    ingressGateways:
+      - name: pub-lb
+        namespace: istio-namespace1
+        enabled: true

@@ -3,5 +3,4 @@ bases:
 - ../../../bases/dev/system/
 patchesStrategicMerge:
 - tenants/kuuji.yaml
-- bitnami-sealed-secrets/bitnami-sealed-secrets.yaml
 - cert-manager/controller/cert-manager.yaml
