@@ -1,0 +1,137 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+data:
+  # Argo CD's externally facing base URL (optional). Required when configuring SSO
+  url: https://argocd.byeon.ca
+
+  # Enables application status badge feature
+  statusbadge.enabled: "true"
+
+  # Enables anonymous user access. The anonymous users get default role permissions specified argocd-rbac-cm.yaml.
+  users.anonymous.enabled: "true"
+  # Specifies token expiration duration
+  users.session.duration: "24h"
+
+  dex.config: |
+    connectors:
+    - type: saml
+      id: saml
+      name: saml
+      config:
+        ssoURL: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx
+        entityIssuer: https://argocd.byeon.ca/api/dex/callback
+        caData: |
+          LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURkRENDQWx5Z0F3SUJBZ0lHQVgzVlB0U1pN
+          QTBHQ1NxR1NJYjNEUUVCQ3dVQU1Ic3hGREFTQmdOVkJBb1RDMGR2YjJkc1pTQkoKYm1NdU1SWXdG
+          QVlEVlFRSEV3MU5iM1Z1ZEdGcGJpQldhV1YzTVE4d0RRWURWUVFERXdaSGIyOW5iR1V4R0RBV0Jn
+          TlZCQXNURDBkdgpiMmRzWlNCR2IzSWdWMjl5YXpFTE1Ba0dBMVVFQmhNQ1ZWTXhFekFSQmdOVkJB
+          Z1RDa05oYkdsbWIzSnVhV0V3SGhjTk1qRXhNakl3Ck1EQXpNREEwV2hjTk1qWXhNakU1TURBek1E
+          QTBXakI3TVJRd0VnWURWUVFLRXd0SGIyOW5iR1VnU1c1akxqRVdNQlFHQTFVRUJ4TU4KVFc5MWJu
+          UmhhVzRnVm1sbGR6RVBNQTBHQTFVRUF4TUdSMjl2WjJ4bE1SZ3dGZ1lEVlFRTEV3OUhiMjluYkdV
+          Z1JtOXlJRmR2Y21zeApDekFKQmdOVkJBWVRBbFZUTVJNd0VRWURWUVFJRXdwRFlXeHBabTl5Ym1s
+          aE1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBCk1JSUJDZ0tDQVFFQXM4K0R5SnVUbC9J
+          RVhrWDFGR0dMeHJsd1FxQjlCanQ4QzdrTFd5N1B5WEVnc3pVdm42QXprT2N6TTJ1ZHJNc00KcnpJ
+          ZFY2RlRmWFpIa0o5VnZNWXhXblIvdytMaE55L3pmdzk3c2RITUZDeTRJcy9jNHNjUGsreEN5SVZu
+          ZGRRMHViMC81K1FuUVhqcwpoSiswZmtqNmZDNmZweWEvb0FsVzJ5QzlwSFF0R0NsOWJOcUlQNUtV
+          ZEZtSi9MUnNoU1pCcndiS2dBYTV5T2pUbDJuZEx1bTJJd2dnCmRXdEdTcDdkS050UVJTR21WZzBh
+          bzZXK2FwQnBRd0RkN09xWGx4NDZBQzZ5a0ZncGFoMnFvY3lMWTNGckxGQUs2UWdDOVB3WC95S3oK
+          WU1Ba2llZm9lckVteGVkVWN3bHFMK3hQTDJrRFF1MHBmUDc3NnhwTkZ5NVMwRmtJNHdJREFRQUJN
+          QTBHQ1NxR1NJYjNEUUVCQ3dVQQpBNElCQVFBdCtLUUUxNUg2dThEcjlCNVFvbDNBZDhadERldzly
+          ZDRUTUFnQ2dtZGlSeUJseU40aUlkbEc1UzZaSzF2MnlVbUFWMkR4CnM0U3pTSFZxYlJoZGZRWXEr
+          d0JiajFzRUZSVm8yUWtYQnMrMFhESkJyclloR05NaFZhbit0N0tDLytRa20zYnJMSVo0K082Mm8v
+          aFIKaDQ1ekJoemJSNStGYkNYcUU0a3R3VGFyZi9iMldyZmh3bEJiT004aU1JNkhqQzlDTTJWK2ky
+          WGxnWk1GSCtmZnBodVBqZ1J6V2JWYgo0WUdNclZkOVdaYTE4NDRBUTMzaVlvamh0M2hNMmJJYTlG
+          d3pmS1d6SGI1d3QwNEtFWUtoQk5iOGNlVmVxc1I3R3BFUmFqUUZRNU0zCm5DN3hNek8vM0hZd1J4
+          TmdPM0YvVmlBaVkyRVFqQmVkV2I0enRIbnJEcFo1Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0=
+
+        redirectURI: https://argocd.byeon.ca/api/dex/callback
+        usernameAttr: name
+        emailAttr: email
+        # optional
+        ssoIssuer: https://accounts.google.com/o/saml2/idp?idpid=C01vqrvlx
+
+  # Specifies regex expression for password
+  # passwordPattern: "^.{8,32}$"
+
+  # # Enables google analytics tracking is specified
+  # ga.trackingid: "UA-12345-1"
+  # # Unless set to 'false' then user ids are hashed before sending to google analytics
+  # ga.anonymizeusers: "false"
+
+  # the URL for getting chat help, this will typically be your Slack channel for support
+  # help.chatUrl: "https://mycorp.slack.com/argo-cd"
+  # the text for getting chat help, defaults to "Chat now!"
+  # help.chatText: "Chat now!"
+
+  # A dex connector configuration (optional). See SSO configuration documentation:
+  # https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/sso
+  # https://dexidp.io/docs/connectors/
+  # dex.config: |
+  #   connectors:
+  #     # GitHub example
+  #     - type: github
+  #       id: github
+  #       name: GitHub
+  #       config:
+  #         clientID: aabbccddeeff00112233
+  #         clientSecret: $dex.github.clientSecret
+  #         orgs:
+  #         - name: your-github-org
+  #           teams:
+  #           - red-team
+  #   # It is possible to provide custom static client for dex if you want to reuse it
+  #   # with other services
+  #   # staticClients:
+  #   # - id: argo-workflow
+  #   #   name: Argo Workflow
+  #   #   redirectURIs:
+  #   #     - https://argo/oauth2/callback
+  #   #   secret: $secretReference
+
+  # OIDC configuration as an alternative to dex (optional).
+  # oidc.config: |
+  #   name: Okta
+  #   issuer: https://dev-123456.oktapreview.com
+  #   clientID: aaaabbbbccccddddeee
+  #   clientSecret: $oidc.okta.clientSecret
+  #   # Optional set of OIDC scopes to request. If omitted, defaults to: ["openid", "profile", "email", "groups"]
+  #   requestedScopes: ["openid", "profile", "email"]
+  #   # Optional set of OIDC claims to request on the ID token.
+  #   requestedIDTokenClaims: {"groups": {"essential": true}}
+
+  # # disables admin user. Admin is enabled by default
+  # admin.enabled: "false"
+  # # add an additional local user with apiKey and login capabilities
+  # #   apiKey - allows generating API keys
+  # #   login - allows to login using UI
+  # accounts.alice: apiKey, login
+  # # disables user. User is enabled by default
+  # accounts.alice.enabled: "false"
+
+  # The location of optional user-defined CSS that is loaded at runtime.
+  # Local CSS Files:
+  # - If the supplied path is to a file mounted on the argocd-server container, that file should be mounted
+  #   within a subdirectory of the existing "/shared/app" directory (e.g. "/shared/app/custom").  Otherwise,
+  #   the file will likely fail to be imported by the browser with an "incorrect MIME type" error.
+  # - The path should be specified relative to the "/shared/app" directory; not as an absolute path.
+  # Remote CSS Files:
+  # - Files may also be loaded from remote locations via fully qualified URLs.
+  # ui.cssurl: "./custom/my-styles.css"
+
+  # An optional user-defined banner message that's displayed at the top of every UI page.
+  # Every time this is updated, it will clear a user's localStorage telling the UI to hide the banner forever.
+  # ui.bannercontent: "Hello there!"
+  # Optional link for banner. If set, the entire banner text will become a link.
+  # You can have bannercontent without a bannerurl, but not the other way around.
+  # ui.bannerurl: "https://argoproj.github.io"
+
+  # Application reconciliation timeout is the max amount of time required to discover if a new manifests version got
+  # published to the repository. Reconciliation by timeout is disabled if timeout is set to 0. Three minutes by default.
+  # > Note: argocd-repo-server deployment must be manually restarted after changing the setting.
+  timeout.reconciliation: 60s
