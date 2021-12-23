@@ -1,0 +1,6 @@
+{
+  "cluster": {
+    "name": "k8s-managed-do",
+    "server": "https://dfbccd33-f11d-4103-b0d4-35c36f855e2c.k8s.ondigitalocean.com"
+  }
+}

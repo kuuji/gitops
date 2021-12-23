@@ -1,0 +1,6 @@
+{
+  "cluster": {
+    "name": "k3s-fedora-do-a",
+    "server": "https://kubernetes.default.svc"
+  }
+}
