@@ -35,7 +35,7 @@ spec:
         # helm specific config
         helm:
           releaseName: gofun
-          valueFile:
+          valueFiles:
           - values.yaml
       # Destination cluster and namespace to deploy the application
       destination:
