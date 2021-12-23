@@ -7,18 +7,23 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - matrix:
-      generators:
-      - git:
-          repoURL: git@github.com:kuuji/gitops.git
-          revision: HEAD
-          files:
-          - path: "v2/clusters/**/.config.json"
-      # - git:
-      #     repoURL: git@github.com:kuuji/gitops.git
-      #     revision: HEAD
-      #     files:
-      #     - path: "v2/clusters/**/kuuji/.go_fun.json"
+  - git:
+      repoURL: git@github.com:kuuji/gitops.git
+      revision: HEAD
+      files:
+      - path: "v2/clusters/**/.config.json"
+  # - matrix:
+  #     generators:
+  #     - git:
+  #         repoURL: git@github.com:kuuji/gitops.git
+  #         revision: HEAD
+  #         files:
+  #         - path: "v2/clusters/**/.config.json"
+  #     - git:
+  #         repoURL: git@github.com:kuuji/gitops.git
+  #         revision: HEAD
+  #         files:
+  #         - path: "v2/clusters/**/kuuji/.go_fun.json"
   template:
     metadata:
       name: '{{cluster.name}}-go-fun'
