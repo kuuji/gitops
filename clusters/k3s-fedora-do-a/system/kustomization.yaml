@@ -12,3 +12,4 @@ resources:
 - argocd/argocd-applicationset-controller-crds.yaml
 - argocd/argocd-rbac-cm.yaml
 - argocd/gh-image-sealed.yaml
+- boostrap.yaml
