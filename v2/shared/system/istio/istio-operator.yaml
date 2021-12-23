@@ -22,3 +22,8 @@ spec:
         path: manifests/charts/istio-operator
       destination:
         server: '{{url}}'
+        namespace: istio-operator
+      syncPolicy:
+        syncOptions:     # Sync options which modifies sync behavior
+        - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+
