@@ -38,6 +38,7 @@ spec:
           parameters:
           - name: "replicas"
             value: 1
+            forceString: true
           valueFiles:
           - values.yaml
       # Destination cluster and namespace to deploy the application
