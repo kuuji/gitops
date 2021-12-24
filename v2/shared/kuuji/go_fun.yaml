@@ -35,6 +35,9 @@ spec:
         # helm specific config
         helm:
           releaseName: gofun
+          values: |
+            gofun:
+              replicas: 1
       # Destination cluster and namespace to deploy the application
       destination:
         server: '{{cluster.server}}'
