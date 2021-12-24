@@ -37,7 +37,7 @@ spec:
           releaseName: gofun
           parameters:
           - name: "replicas"
-            value: 1
+            value: "1"
             forceString: true
           valueFiles:
           - values.yaml
