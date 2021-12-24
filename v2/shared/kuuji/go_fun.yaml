@@ -35,9 +35,9 @@ spec:
         # helm specific config
         helm:
           releaseName: gofun
-          values: |
-            gofun:
-              replicas: 1
+          parameters:
+          - name: "replicas"
+            value: 1
           valueFiles:
           - values.yaml
       # Destination cluster and namespace to deploy the application
