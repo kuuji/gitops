@@ -13,6 +13,3 @@ spec:
     targetRevision: HEAD
     directory:
       recurse: true
-  syncPolicy:
-    automated:
-      selfHeal: true
