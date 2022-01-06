@@ -39,7 +39,7 @@ spec:
 
           # Values file as block file
           values: |
-            {{values}}
+            '{{values}}'
       # Destination cluster and namespace to deploy the application
       destination:
         server: https://kubernetes.default.svc
