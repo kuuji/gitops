@@ -1,4 +1,4 @@
-values:
+values: |
   containers:
   - image: ghcr.io/kuuji/project/app:GaGhtgD
     livenessProbe:
