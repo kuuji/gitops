@@ -1,0 +1,4 @@
+
+---
+resources:
+  - istio/istio-ns-2.yaml
