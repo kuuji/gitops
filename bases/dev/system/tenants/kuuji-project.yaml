@@ -59,6 +59,7 @@ spec:
     description: Read-only privileges to kuuji
     policies:
     - p, proj:kuuji:read-only, applications, get, kuuji/*, allow
+    - p, proj:kuuji:rollback, repositories, get, *, allow
     groups:
     - test@byeon.ca
   - name: rollback
