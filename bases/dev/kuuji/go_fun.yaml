@@ -38,7 +38,7 @@ spec:
               path: /
               port: 8080
         annotations:
-          link.argocd.argoproj.io/external-link: htts://gofun.byeon.ca
+          link.argocd.argoproj.io/external-link: https://gofun.byeon.ca
         service:
           ports:
           - port: 8080
