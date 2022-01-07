@@ -8,6 +8,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: clusters/k3s-fedora-do-a
+    path: clusters/k3s-fedora-do
     repoURL: git@github.com:kuuji/gitops.git
     targetRevision: HEAD
