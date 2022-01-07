@@ -8,9 +8,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: clusters/k3s-fedora-do-a/system
+    path: clusters/k3s-fedora-do/system
     repoURL: git@github.com:kuuji/gitops.git
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true

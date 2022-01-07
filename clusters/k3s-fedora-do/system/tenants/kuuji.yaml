@@ -6,4 +6,4 @@ metadata:
   namespace: argocd
 spec:
   source:
-    path: clusters/k3s-fedora-do-a/kuuji
+    path: clusters/k3s-fedora-do/kuuji

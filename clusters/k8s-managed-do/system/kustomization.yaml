@@ -1,6 +1,0 @@
----
-bases:
-- ../../../bases/dev/system/
-patchesStrategicMerge:
-- tenants/kuuji.yaml
-- cert-manager/controller/cert-manager.yaml
