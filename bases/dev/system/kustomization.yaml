@@ -6,6 +6,7 @@ resources:
   - istio/gateway.yaml
   - istio/istio-operator.yaml
   - tenants/kuuji.yaml
+  - tenants/kuuji-project.yaml
   - cert-manager/controller/cert-manager.yaml
   - cert-manager/manifests/clouddns-dns01-solver-svc-acct-sealed-secret.yaml
   - cert-manager/manifests/issuer.yaml
