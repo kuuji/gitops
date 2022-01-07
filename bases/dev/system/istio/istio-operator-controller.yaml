@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-operator-controller
+  # You'll usually want to add your resources to the argocd namespace.
+  namespace: argocd
+spec:
+  project: "default"
+  source:
+    repoURL: https://github.com/istio/istio.git
+    targetRevision: 1.12.1
+    path: manifests/charts/istio-operator
+    helm:
+      values: |
+        watchedNamespaces: istio-namespace1
+        hub: docker.io/istio
+        tag: 1.12.1
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: istio-operator
+  syncPolicy:
+    syncOptions:     # Sync options which modifies sync behavior
+    - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+
