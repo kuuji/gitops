@@ -25,4 +25,4 @@ data:
   # # If omitted, defaults to: '[groups]'. The scope value can be a string, or a list of strings.
   scopes: '[email, group]'
 
-  policy.default: role:readonly
+  # policy.default: role:readonly
