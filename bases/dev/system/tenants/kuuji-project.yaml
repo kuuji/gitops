@@ -36,6 +36,14 @@ spec:
     kind: Deployment
   - group: 'apps'
     kind: StatefulSet
+  - group: 'networking.istio.io'
+    kind: VirtualService
+  - group: 'networking.istio.io'
+    kind: DestinationRule
+  - group: 'argoproj.io'
+    kind: Application
+  - group: 'bitnami.com'
+    kind: SealedSecret
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
