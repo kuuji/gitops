@@ -59,12 +59,3 @@ spec:
     description: Read-only privileges to kuuji
     policies:
     - p, proj:kuuji:read-only, applications, get, kuuji/*, allow
-    groups:
-    - kuuji
-
-  # A role which provides sync privileges to only the guestbook-dev application, e.g. to provide
-  # sync privileges to a CI system
-  - name: ci-role
-    description: Sync privileges for guestbook-dev
-    policies:
-    - p, proj:kuuji:ci-role, applications, sync, kuuji/guestbook-dev, allow
