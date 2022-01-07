@@ -46,6 +46,8 @@ spec:
     kind: Application
   - group: 'bitnami.com'
     kind: SealedSecret
+  - group: 'apps'
+    kind: Service
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
