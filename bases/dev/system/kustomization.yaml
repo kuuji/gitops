@@ -9,4 +9,4 @@ resources:
   - cert-manager/manifests/clouddns-dns01-solver-svc-acct-sealed-secret.yaml
   - cert-manager/manifests/issuer.yaml
   - cert-manager/manifests/certificate.yaml
-  - bitnami-sealed-secrets/bitnami-sealed-secrest.yaml
+  - bitnami-sealed-secrets/bitnami-sealed-secrets.yaml
