@@ -59,3 +59,5 @@ spec:
     description: Read-only privileges to kuuji
     policies:
     - p, proj:kuuji:read-only, applications, get, kuuji/*, allow
+    groups:
+    - test@byeon.ca
