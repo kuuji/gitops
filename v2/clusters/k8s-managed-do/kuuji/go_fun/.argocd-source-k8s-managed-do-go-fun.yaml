@@ -1,5 +1,0 @@
-helm:
-  parameters:
-  - name: gofun.containers[0].image
-    value: ghcr.io/kuuji/project/app:pre-production-LacW
-    forcestring: true
