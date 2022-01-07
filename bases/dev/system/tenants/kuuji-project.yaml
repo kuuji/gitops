@@ -61,3 +61,12 @@ spec:
     - p, proj:kuuji:read-only, applications, get, kuuji/*, allow
     groups:
     - test@byeon.ca
+  - name: rollback
+    description: rollback privileges to kuuji
+    policies:
+    - p, proj:kuuji:rollback, applications, sync, kuuji/*, allow
+    - p, proj:kuuji:rollback, applications, update, kuuji/*, allow
+    - p, proj:kuuji:rollback, applications, override, kuuji/*, allow
+    - p, proj:kuuji:rollback, repositories, get, *, allow
+    groups:
+    - test@byeon.ca
