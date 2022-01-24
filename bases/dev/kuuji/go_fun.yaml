@@ -46,7 +46,6 @@ spec:
             name: http
         pullSecrets:
         - gh-registry-secret
-        replicas: 1
         rollingUpdate:
           enabled: true
           maxSurge: "50%"

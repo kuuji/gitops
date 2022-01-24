@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: go-fun-values
+data: 
+  values.yaml: |
+    replicas: 2

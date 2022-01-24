@@ -4,3 +4,4 @@
 resources:
   - go_fun.yaml
   - go_funvs.yaml
+  - go-fun-values.yaml
