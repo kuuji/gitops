@@ -48,6 +48,8 @@ spec:
     kind: SealedSecret
   - group: ''
     kind: Service
+  - group: ''
+    kind: ConfigMap
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
