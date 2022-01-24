@@ -5,4 +5,4 @@ metadata:
   name: go-fun-values
 data: 
   values.yaml: |
-    replicas: 2
+    replicas: 3
