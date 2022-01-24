@@ -24,7 +24,8 @@ spec:
 
       # Release name override (defaults to application name)
       releaseName: gofun
-
+      valueFiles:
+      - cm://kuuji/go-fun-values
       # Values file as block file
       values: |
         containers:
