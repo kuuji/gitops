@@ -21,6 +21,8 @@ spec:
         tls: external
         hostname: rancher.byeon.ca
         replicas: 1
+        ingress:
+          enabled: false
 
   # Destination cluster and namespace to deploy the application
   destination:
