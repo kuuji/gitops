@@ -12,3 +12,5 @@ resources:
   - cert-manager/manifests/issuer.yaml
   - cert-manager/manifests/certificate.yaml
   - bitnami-sealed-secrets/bitnami-sealed-secrets.yaml
+  - rancher/rancher.yaml
+  - rancher/rancher_istio.yaml
